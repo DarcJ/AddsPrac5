@@ -6,9 +6,9 @@
 class MapTriple : public MapGeneric
 {
 private:
+     int f(int);
 public:
     MapTriple();
-    int f(int);
     ~MapTriple();
 };
 

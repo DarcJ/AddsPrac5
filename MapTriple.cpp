@@ -2,7 +2,7 @@
 
 MapTriple::MapTriple()
 {
-
+    n = 0;
 }
 
 int MapTriple::f(int i){

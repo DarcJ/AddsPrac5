@@ -9,18 +9,19 @@ using namespace std;
 int main()
 {
     vector<int> a;
-    vector<int> b;
     a.push_back(1);
     a.push_back(2);
-    a.push_back(3);
+    a.push_back(-3);
     a.push_back(4);
-    MapGeneric mapT; 
+    a.push_back(0);
+    MapSquare mapT; 
+    vector<int> b;
     b = mapT.map(a);
 
     cout << "mapped vector : ";
 
-    for(int j=0; j < b.size(); j++)
-    cout << a.at(j) << ' ';
+    for(int j=0; j < (b.size()); j++)
+    cout << b.at(j) << ' ';
 
 
 

@@ -1,6 +1,6 @@
 #include "MapAbsoluteValue.h"
 
-MapAbolsuteValue::MapAbolsuteValue()
+MapAbsoluteValue::MapAbsoluteValue()
 {
     n = 0;
 }
@@ -9,6 +9,6 @@ int MapAbsoluteValue::f(int i){
     return abs(i);
 }
 
-MapAbsoluteValue::~MapAboluteValue()
+MapAbsoluteValue::~MapAbsoluteValue()
 {
 }

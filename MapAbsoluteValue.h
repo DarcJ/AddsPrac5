@@ -4,15 +4,14 @@
 #include "MapGeneric.h"
 #include <stdlib.h>
 
-class MapAboluteValue : private MapGeneric
+class MapAbsoluteValue : public MapGeneric
 {
 private:
     
-    
-public:
-    MapAboluteValue();
     int f(int);
-    ~MapAboluteValue();
+public:
+    MapAbsoluteValue();
+    ~MapAbsoluteValue();
 };
 
 #endif
