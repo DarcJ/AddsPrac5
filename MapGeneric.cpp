@@ -1,11 +1,20 @@
 #include "MapGeneric.h"
 
 
-MapGeneric::MapGeneric(/* args */)
+MapGeneric::MapGeneric()
 {
+    n = 0;
 }
-vector<int> map(vector<int> v){
+std::vector<int> map(std::vector<int> v){
+
+    if ( n > (v.size()+1))
+    {
+        return v;
+    }
     
+    v[n] = f(v.at(n));
+    n++;
+    map(v);
 
 }
 

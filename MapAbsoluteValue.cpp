@@ -2,12 +2,11 @@
 
 MapAbolsuteValue::MapAbolsuteValue()
 {
+    n = 0;
 }
 
 int MapAbsoluteValue::f(int i){
-    mapped = abs(i);
-    return mapped;
-
+    return abs(i);
 }
 
 MapAbsoluteValue::~MapAboluteValue()

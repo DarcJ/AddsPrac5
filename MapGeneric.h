@@ -5,12 +5,12 @@
 
 class MapGeneric{
     private:
-    int mapped; 
+    int n;
     virtual int f(int i);
 
     public:
     MapGeneric();
-    vector<int> map(vector<int> v);
+    std::vector<int> map(std::vector<int> v);
     ~MapGeneric();
 
 };

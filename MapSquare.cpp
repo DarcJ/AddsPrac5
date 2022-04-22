@@ -2,11 +2,11 @@
 
 MapSquare::MapSquare()
 {
+    n = 0;
 }
 
 int MapSquare::f(int i){
-    mapped = i*i;
-    return mapped;
+    return i*i;
 
 }
 

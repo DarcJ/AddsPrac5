@@ -3,14 +3,12 @@
 
 #include "MapGeneric.h"
 
-class MapTriple : private MapGeneric
+class MapTriple : public MapGeneric
 {
 private:
-    
-    
 public:
     MapTriple();
-    int f(int)
+    int f(int);
     ~MapTriple();
 };
 
