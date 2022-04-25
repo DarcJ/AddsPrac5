@@ -7,11 +7,11 @@ FilterForTwoDigitPositive::FilterForTwoDigitPositive()
 bool FilterForTwoDigitPositive::g(int i){
     if ((i >= 10) && (i <= 99))
     {
-        if (i % 2 == 0)
+        if (i > 0)
         {
             return true;
         }
-        else if (i % 2 != 0)
+        else if (i <=0)
         {
             return false;
         }

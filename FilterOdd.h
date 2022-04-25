@@ -5,10 +5,9 @@
 
 class FilterOdd : public FilterGeneric{
     private:
-
+    bool g(int i);
     public:
     FilterOdd();
-    bool g(int i);
     ~FilterOdd();
 
 };

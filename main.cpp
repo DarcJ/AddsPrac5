@@ -2,13 +2,17 @@
 #include "MapAbsoluteValue.h"
 #include "MapTriple.h"
 #include "MapSquare.h"
+#include "FilterGeneric.h"
+#include "FilterForTwoDigitPositive.h"
+#include "FilterOdd.h"
+#include "FilterNonPositive.h"
 #include <vector>
 #include <iostream>
 using namespace std;
 
 int main()
 {
-    int s = 3;
+    int s = 5;
     int x;
     vector<int> a;
     cout << "Enter Vector: ";
@@ -19,9 +23,9 @@ int main()
     }
     
     
-    MapAbsoluteValue mapT; 
+    FilterForTwoDigitPositive mapT; 
     vector<int> b(s);
-    b = mapT.map(a);
+    b = mapT.filter(a);
 
     cout << "mapped vector : ";
 
