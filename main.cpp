@@ -8,7 +8,7 @@ using namespace std;
 
 int main()
 {
-    int s = 20;
+    int s = 3;
     int x;
     vector<int> a;
     cout << "Enter Vector: ";
@@ -19,18 +19,16 @@ int main()
     }
     
     
-    MapTriple mapT; 
-    vector<int> b;
+    MapAbsoluteValue mapT; 
+    vector<int> b(s);
     b = mapT.map(a);
 
     cout << "mapped vector : ";
 
-    for(int j=0; j < (b.size()); j++)
-    cout << b.at(j) << ' ';
+    for(int j=0; j < (b.size()); j++){
+        cout << b[j] << ' ';
 
-
-
-
-
+    }
+    cout << endl;
     return 0;
 }

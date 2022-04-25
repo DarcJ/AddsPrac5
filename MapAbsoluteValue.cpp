@@ -2,7 +2,6 @@
 
 MapAbsoluteValue::MapAbsoluteValue()
 {
-    n = 0;
 }
 
 int MapAbsoluteValue::f(int i){

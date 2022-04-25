@@ -1,0 +1,8 @@
+if ( n >= (v.size()))
+    {
+        return v;
+    }
+
+    v[n] = f(v.at(n));
+    n++;
+    return map(v);

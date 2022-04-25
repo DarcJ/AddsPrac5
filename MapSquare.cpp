@@ -2,7 +2,6 @@
 
 MapSquare::MapSquare()
 {
-    n = 0;
 }
 
 int MapSquare::f(int i){

@@ -1,25 +1,31 @@
 #include "MapGeneric.h"
-
+#include <iostream>
 
 MapGeneric::MapGeneric()
 {
-    n = 0;
 }
 int MapGeneric::f(int i){
 
-    return 0;
+    return i;
 }
 std::vector<int> MapGeneric::map(std::vector<int> v){
 
-    if ( n >= (v.size()))
-    {
+    std::vector<int> newV; // create new vector
+   
+    if(v.size() <= 0){ //Base case to return
         return v;
     }
 
-    v[n] = f(v.at(n));
-    n++;
-    return map(v);
+    v[0]= f(v[0]); //Map f onto first value of v
 
+    newV = v; // copy v onto temp vector
+    v.pop_back(); // delete last value of 
+    v = map(v); //recursively call map
+
+    newV.back() = f(newV.back()); // maps function onto last element of newV and puts it in last place of newV
+    v.push_back(newV.back());// Adds last element of newV to v. 
+
+    return v;
 
 }
 
