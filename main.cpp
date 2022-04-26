@@ -25,7 +25,7 @@ int main()
     vector<int> a;
     cout << "Enter Vector: ";
     cin>>x;
-    y = strtok(x, " ");
+    //y = strtok(x, " ");
     z = strtok(y, ",");
     while (z != NULL)
     {
