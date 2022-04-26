@@ -17,33 +17,50 @@ using namespace std;
 
 int main()
 {
-    int s = 5;
+    int s = 20;
     char x[s*2];
+    char *z;
+    char *y;
     int k;
     vector<int> a;
     cout << "Enter Vector: ";
     cin>>x;
-    char *z;
-    z = strtok(x, ",");
+    y = strtok(x, " ");
+    z = strtok(y, ",");
     while (z != NULL)
     {
        k = atoi(z);
        a.push_back(k);
        z = strtok(NULL, ","); 
     }
-    
-    ReduceGCD mapT; 
+
     vector<int> b(s);
-    int p;
-    p = mapT.reduce(a);
+    vector<int> c(s);
+    vector<int> d(s);
+    vector<int> e(s);
+    int f;
+    int g;
+    
 
-    cout << "mapped vector : ";
+    //Mapping
+    MapAbsoluteValue mapA;
+    b = mapA.map(a);
+    MapTriple mapB;
+    c = mapB.map(b);
 
-    //for(int j=0; j < (b.size()); j++){
-        //cout << b[j] << ' ';
+    //Filtering
+    FilterForTwoDigitPositive filterC;
+    d = filterC.filter(c);
+    FilterOdd filterD;
+    e = filterD.filter(d);
 
-    //}
-    cout << p << "\n";
-    cout << endl;
+    //Reducing
+    ReduceMinimum reduceM;
+    f = reduceM.reduce(e);
+    ReduceGCD reduceGCD;
+    g = reduceGCD.reduce(e);
+
+    cout << f << " " << g << endl;
+
     return 0;
 }
