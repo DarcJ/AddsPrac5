@@ -20,12 +20,10 @@ int main()
     int s = 20;
     char x[s*2];
     char *z;
-    char *y;
     int k;
     vector<int> a;
     cout << "Enter Vector: ";
     cin>>x;
-    //y = strtok(x, " ");
     z = strtok(x, ",");
     while (z != NULL)
     {
