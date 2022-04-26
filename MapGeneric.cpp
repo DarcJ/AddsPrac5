@@ -11,12 +11,11 @@ int MapGeneric::f(int i){
 std::vector<int> MapGeneric::map(std::vector<int> v){
 
     std::vector<int> newV; // create new vector
-   
-    if(v.size() <= 0){ //Base case to return
+
+    if(v.size() <= 1){ //Base case to return
+        v[0]= f(v[0]); //Map f onto first value of v
         return v;
     }
-
-    v[0]= f(v[0]); //Map f onto first value of v
 
     newV = v; // copy v onto temp vector
     v.pop_back(); // delete last value of 

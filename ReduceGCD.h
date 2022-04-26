@@ -3,10 +3,9 @@
 #include "ReduceGeneric.h"
 class ReduceGCD : public ReduceGeneric{
     private:
-
+    int binaryOperator(int a, int b);
     public:
     ReduceGCD();
-    int binaryOperator(int a, int b);
     ~ReduceGCD();
 
 };

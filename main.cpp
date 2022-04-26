@@ -8,24 +8,30 @@
 #include "FilterNonPositive.h"
 #include <vector>
 #include <iostream>
+#include <stdio.h>
+#include <cstring>
 using namespace std;
 
 int main()
 {
     int s = 5;
-    int x;
+    char x[s*2];
+    int k;
     vector<int> a;
     cout << "Enter Vector: ";
-    for (int i = 0; i < s; i++)
+    cin>>x;
+    char *z;
+    z = strtok(x, ",");
+    while (z != NULL)
     {
-        cin>>x;
-        a.push_back(x);
+       k = atoi(z);
+       a.push_back(k);
+       z = strtok(NULL, ","); 
     }
     
-    
-    FilterForTwoDigitPositive mapT; 
+    MapTriple mapT; 
     vector<int> b(s);
-    b = mapT.filter(a);
+    b = mapT.map(a);
 
     cout << "mapped vector : ";
 

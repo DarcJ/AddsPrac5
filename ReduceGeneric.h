@@ -1,5 +1,5 @@
 #ifndef REDUCEGENERIC_H
-#define REDUCEGENERIC_HReduceGeneric
+#define REDUCEGENERIC_H
 #include <vector>
 
 class ReduceGeneric{        

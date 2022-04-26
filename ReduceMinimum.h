@@ -3,10 +3,9 @@
 #include "ReduceGeneric.h"
 class ReduceMinimum : public ReduceGeneric{
     private:
-
+    int binaryOperator(int a, int b);
     public:
     ReduceMinimum();
-    int binaryOperator(int a, int b);
     ~ReduceMinimum();
     
 

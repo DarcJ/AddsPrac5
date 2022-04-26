@@ -13,12 +13,12 @@ int ReduceMinimum::binaryOperator(int a, int b){
     {
         return b;
     }
-    if (b = a)
+    if (b == a)
     {
         return a;
     }
 
-    return 1; 
+    return a; 
     
     
 }
