@@ -6,6 +6,9 @@
 #include "FilterForTwoDigitPositive.h"
 #include "FilterOdd.h"
 #include "FilterNonPositive.h"
+#include "ReduceGeneric.h"
+#include "ReduceMinimum.h"
+#include "ReduceGCD.h"
 #include <vector>
 #include <iostream>
 #include <stdio.h>
@@ -29,16 +32,18 @@ int main()
        z = strtok(NULL, ","); 
     }
     
-    MapTriple mapT; 
+    ReduceGCD mapT; 
     vector<int> b(s);
-    b = mapT.map(a);
+    int p;
+    p = mapT.reduce(a);
 
     cout << "mapped vector : ";
 
-    for(int j=0; j < (b.size()); j++){
-        cout << b[j] << ' ';
+    //for(int j=0; j < (b.size()); j++){
+        //cout << b[j] << ' ';
 
-    }
+    //}
+    cout << p << "\n";
     cout << endl;
     return 0;
 }

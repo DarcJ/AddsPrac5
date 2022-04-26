@@ -1,6 +1,7 @@
 #include "ReduceGeneric.h"
+#include <iostream>
 
-ReduceGeneric::ReduceGeneric(/* args */)
+ReduceGeneric::ReduceGeneric()
 {
 }
 int ReduceGeneric::binaryOperator(int a, int b){
@@ -9,21 +10,20 @@ int ReduceGeneric::binaryOperator(int a, int b){
 int ReduceGeneric::reduce(std::vector<int> v){
 
     std::vector<int> newV; // create new vector
+    int r;
 
-    if(v.size() <= 2){ //Base case to return
-        v[0]= binaryOperator(v[0], v[1]); //Map f onto first value of v
-        v.pop_back();
-        return v;
+    if(v.size() <= 1){ //Base case to return
+        r = v[0];
+        return r;
     }
 
-    newV = v; // copy v onto temp vector
+    r = binaryOperator(v[v.size()-2], v.back());
     v.pop_back(); // delete last value of 
-    v = reduce(v); //recursively call map
-
-    newV.back() = booleanOperator(newV.back()); // maps function onto last element of newV and puts it in last place of newV
-    v.push_back(newV.back());// Adds last element of newV to v. 
-
-    return v;
+    v.pop_back();
+    v.push_back(r);
+ 
+    r = reduce(v); //recursively call mapu
+    return r;
 }
 ReduceGeneric::~ReduceGeneric()
 {
